@@ -7,8 +7,12 @@ Route::get('/homepage', function () {
     return view('homepage');
 });
 
-Route::get('/signup', function () {
-    return view('signup');
+Route::get('/EventManagement', function () {
+    return view('EventManagement');
+});
+
+Route::get('/signinsignup', function () {
+    return view(view: 'signinsignup');
 });
 // Route::get('/newdog', function () {
 // return view('newdog');

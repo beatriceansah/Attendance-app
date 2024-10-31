@@ -9,59 +9,60 @@
     <style>
         /* styles.css */
 
-/* General container styling */
-.container {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f8f9fa; /* Light grey background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-/* Styling the nav tabs */
-.nav-tabs .nav-item .nav-link {
-    color: #495057; /* Dark grey text color */
-    font-weight: bold;
-    border: none;
-    padding: 10px 20px;
-}
-
-.nav-tabs .nav-item .nav-link.active {
-    background-color: #007bff; /* Primary color for active tab */
-    color: #fff; /* White text */
-    border-radius: 4px;
-}
-
-/* Styling the forms */
-.form-group label {
-    font-weight: 500;
-    color: #333;
-}
-
-.form-control {
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    transition: box-shadow 0.2s;
-}
-
-.form-control:focus {
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue shadow on focus */
-    border-color: #007bff; /* Blue border on focus */
-}
-
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: background-color 0.2s;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
+        /* General container styling */
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa; /* Light grey background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        
+        /* Styling the nav tabs */
+        .nav-tabs .nav-item .nav-link {
+            color: #495057; /* Dark grey text color */
+            font-weight: bold;
+            border: none;
+            padding: 10px 20px;
+        }
+        
+        .nav-tabs .nav-item .nav-link.active {
+            background-color: #007bff; /* Primary color for active tab */
+            color: #fff; /* White text */
+            border-radius: 4px;
+        }
+        
+        /* Styling the forms */
+        .form-group label {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-control {
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            transition: box-shadow 0.2s;
+        }
+        
+        .form-control:focus {
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue shadow on focus */
+            border-color: #007bff; /* Blue border on focus */
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        
 
     </style>
 </head>
@@ -80,6 +81,10 @@
             <div class="tab-pane fade show active" id="login" role="tabpanel">
                 <form class="mt-3">
                     <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    <div class="form-group">
                         <label for="loginEmail">Email or Phone Number</label>
                         <input type="text" class="form-control" id="loginEmail" required>
                     </div>
@@ -93,6 +98,10 @@
             <!-- Sign-Up Form -->
             <div class="tab-pane fade" id="register" role="tabpanel">
                 <form class="mt-3">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
                     <div class="form-group">
                         <label for="registerEmail">Email</label>
                         <input type="email" class="form-control" id="registerEmail" required>
