@@ -14,6 +14,10 @@ Route::get('/EventManagement', function () {
 Route::get('/signinsignup', function () {
     return view(view: 'signinsignup');
 });
+
+Route::get('/features', function () {
+    return view(view: 'features');
+});
 // Route::get('/newdog', function () {
 // return view('newdog');
 // });
