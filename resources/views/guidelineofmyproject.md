@@ -28,7 +28,7 @@ Determine User Roles:
 Goal: Plan the app's architecture and select appropriate tools and technologies.
 
 1. Architecture:
-    1. Frontend: Mobile app (React Native for cross-platform, Flutter, or native Android/iOS development). 1.1
+    1. Frontend: web app ( web application framework(laravel)). 1.1
     2. Backend: RESTful API using Node.js, Python (Django or Flask), or .NET. 1.2
     3. Database: Relational (e.g., MySQL/PostgreSQL) or NoSQL (e.g., MongoDB) depending on scalability needs. 1.3
     4. Authentication: Use secure methods like JWT (JSON Web Tokens) for user authentication. 1.4
