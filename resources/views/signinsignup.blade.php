@@ -3,132 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
     <title>User Authentication</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* styles.css */
+        body {
+    background-color: #f8f9fa;
+}
 
-        /* General container styling */
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fa; /* Light grey background */
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        }
-        
-        /* Styling the nav tabs */
-        .nav-tabs .nav-item .nav-link {
-            color: #495057; /* Dark grey text color */
-            font-weight: bold;
-            border: none;
-            padding: 10px 20px;
-        }
-        
-        .nav-tabs .nav-item .nav-link.active {
-            background-color: #007bff; /* Primary color for active tab */
-            color: #fff; /* White text */
-            border-radius: 4px;
-        }
-        
-        /* Styling the forms */
-        .form-group label {
-            font-weight: 500;
-            color: #333;
-        }
-        
-        .form-control {
-            border: 1px solid #ced4da;
-            border-radius: 4px;
-            transition: box-shadow 0.2s;
-        }
-        
-        .form-control:focus {
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue shadow on focus */
-            border-color: #007bff; /* Blue border on focus */
-        }
-        
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background-color 0.2s;
-        }
-        
-        .btn-primary:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-        }
-        
+h2 {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.nav-tabs .nav-link {
+    font-weight: bold;
+    color: #495057;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+}
 
     </style>
 </head>
 <body>
     <div class="container mt-5">
-        <ul class="nav nav-tabs" id="authTab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab">Sign In</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab">Sign Up</a>
-            </li>
-        </ul>
-        <div class="tab-content" id="authTabContent">
-            <!-- Sign-In Form -->
-            <div class="tab-pane fade show active" id="login" role="tabpanel">
-                <form class="mt-3">
-                    <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" class="form-control" id="fullName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="loginEmail">Email or Phone Number</label>
-                        <input type="text" class="form-control" id="loginEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="loginPassword">Password</label>
-                        <input type="password" class="form-control" id="loginPassword" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Sign In</button>
-                </form>
+        <h2 class="text-center mb-4">Church Attendance App - User Authentication</h2>
+        
+        <body class="d-flex align-items-center justify-content-center bg-body-secondary min-vh-100">
+    <div class="card p-4 shadow-sm" style="width: 24rem;">
+      <div class="card-header text-center bg-white border-0">
+        <a href="index2.html" class="link-dark text-decoration-none">
+          <h1 class="mb-0"><b>Admin</b>LTE</h1>
+        </a>
+      </div>
+      <div class="card-body">
+        <p class="text-center text-muted">Sign in to start your session</p>
+
+        <form action="index3.html" method="post">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email</label>
+            <div class="input-group">
+              <input
+                id="loginEmail"
+                type="email"
+                class="form-control"
+                placeholder="Email"
+                required
+              />
+              <span class="input-group-text">
+                <i class="bi bi-envelope"></i>
+              </span>
             </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <div class="input-group">
+              <input
+                id="loginPassword"
+                type="password"
+                class="form-control"
+                placeholder="Password"
+                required
+              />
+              <span class="input-group-text">
+                <i class="bi bi-lock-fill"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="rememberMe"
+              />
+              <label class="form-check-label" for="rememberMe">
+                Remember Me
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+          </div>
+        </form>
+
+        <div class="text-center mb-3">
+          <p class="text-muted">- OR -</p>
+          <a href="#" class="btn btn-primary w-100 mb-2">
+            <i class="bi bi-facebook me-2"></i> Sign in using Facebook
+          </a>
+          <a href="#" class="btn btn-danger w-100">
+            <i class="bi bi-google me-2"></i> Sign in using Google
+          </a>
+        </div>
+
+        <div class="text-center">
+          <p><a href="forgot-password.html">I forgot my password</a></p>
+          <p><a href="register.html" class="text-decoration-none">Register a new membership</a></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            
             <!-- Sign-Up Form -->
             <div class="tab-pane fade" id="register" role="tabpanel">
-                <form class="mt-3">
+                <form>
                     <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" class="form-control" id="fullName" required>
+                        <label for="registerFullName">Full Name</label>
+                        <input type="text" class="form-control" id="registerFullName" placeholder="Enter your full name" name="fullName">
                     </div>
                     <div class="form-group">
                         <label for="registerEmail">Email</label>
-                        <input type="email" class="form-control" id="registerEmail" required>
+                        <input type="email" class="form-control" id="registerEmail" placeholder="Enter email" name="email">
                     </div>
                     <div class="form-group">
                         <label for="registerPhone">Phone Number</label>
-                        <input type="tel" class="form-control" id="registerPhone" required>
+                        <input type="tel" class="form-control" id="registerPhone" placeholder="Enter phone number" name="PhoneNumber">
                     </div>
                     <div class="form-group">
                         <label for="registerPassword">Password</label>
-                        <input type="password" class="form-control" id="registerPassword" required>
+                        <input type="password" class="form-control" id="registerPassword" placeholder="Enter password" name="Password" >
                     </div>
                     <div class="form-group">
                         <label for="userRole">Select Role</label>
-                        <select class="form-control" id="userRole" required>
+                        <select class="form-control" id="userRole" >
                             <option value="">Choose role...</option>
                             <option value="admin">Admin</option>
                             <option value="attendee">Attendee</option>
                             <option value="volunteer">Volunteer</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
                 </form>
             </div>
         </div>
     </div>
 
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
