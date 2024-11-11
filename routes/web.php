@@ -22,7 +22,7 @@ Route::get('/userprofileandhistry', function () {
     return view(view: 'userprofileandhistry');
 });
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view(view: 'welcome');
 })->name('home');
 // Route::get( () {
@@ -35,7 +35,13 @@ Route::post('/login', [AuthManager::class , 'loginPost'])->name('login.post');
 
 Route::post('/registration', [AuthManager::class , 'registrationPost'])->name('registration.post');
 Route::get('/logout', [AuthManager::class, 'logout'])->name('logout');
+Route::group(['middleware'=> 'auth'], function(){
+    
+    Route::get( '/profile', function (){
+        return "Hi";
+   });
 
+});
 
 
 
