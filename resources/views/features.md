@@ -1,6 +1,6 @@
 # User Authentication
 ## Sign-Up/Sign-In:
-1. Sign-Up/Sign-In: Allow users (students, staff, and volunteers) to create accounts using email, phone numbers, or social media credentials.
+1. Sign-Up/Sign-In: Allow users (students, staff, and volunteers) to create accounts using name,email, and password.
 2. Role-Based Access: Different roles (e.g., admin, attendee, volunteer) with varying access rights for event management and reporting.
 
 # Event Management

@@ -21,25 +21,35 @@ Route::get('/signinsignup', function () {
 Route::get('/userprofileandhistry', function () {
     return view(view: 'userprofileandhistry');
 });
+// Route::get('/dashboard', function () {
+//     return view(view: 'dashboard');
+// });
 
-Route::get('/welcome', function () {
-    return view(view: 'welcome');
+Route::get('/', function () {
+    return view(view: 'home');
 })->name('home');
+
+
+
+//Route::get('/dashboard', function () {
+   // return view(view: 'home');
+//})
 // Route::get( () {
 //     return view('home');
 // })->name('home');
-
-Route::view('/home', 'home')->name('home');
+Route::view('/role', 'role')->name('role');
+Route::view('/Eventmanagement', 'Eventmanagement')->name('Eventmanagement');
+// Route::view('/home', 'home')->name('home');
 Route::post('/login', [AuthManager::class , 'loginPost'])->name('login.post');
 // Route::get('/registration', [AuthManager::class , 'registration'])->name('registration');
 
 Route::post('/registration', [AuthManager::class , 'registrationPost'])->name('registration.post');
 Route::get('/logout', [AuthManager::class, 'logout'])->name('logout');
 Route::group(['middleware'=> 'auth'], function(){
-    
-    Route::get( '/profile', function (){
-        return "Hi";
-   });
+
+//     Route::get( '/profile', function (){
+//         return "Hi";
+//    });
 
 });
 
@@ -60,6 +70,7 @@ Route::group(['middleware'=> 'auth'], function(){
 //Route::view('/userslogin','userslogin');
 Route::view('/registration','registration')->name('registration');
 Route::view('/login','login')->name('login');
+Route::view('/dashboard','dashboard')->name('dashboard');
 //Route::view('/index','index');
 
 

@@ -10,20 +10,20 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthManager extends Controller
 {
-    function login(){
-        if(Auth::check()){
-            return redirect(route('home'));
-        }
-        return view('login');
-    }
-    function registration(){
+    // function login(){
+    //     if(Auth::check()){
+    //         return redirect(route('home'));
+    //     }
+    //     return view('login');
+    // }
+    // function registration(){
 
-        if(Auth::check()){
-            return redirect(route('home'));
-        }
-        return view('registration');
-    
-    }
+    //     if(Auth::check()){
+    //         return redirect(route('home'));
+    //     }
+    //     return view('registration');
+
+    // }
 
 
    function loginPost(Request $request){
@@ -34,18 +34,18 @@ class AuthManager extends Controller
 
     $credentials = $request->only('email','password');
     if(Auth::attempt($credentials)){
-        return redirect()->intended(route('home'));
+        return redirect()->intended(route('dashboard'))->with("success", "elcome to cccm");
     }
     return redirect(route('login'))->with("error", "login details are not valid");
     }
-    
+
     function registrationPost(Request $request){
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users' ,
             'password' => 'required'
-        ]); 
-        
+        ]);
+
         $data['name']=$request->name;
         $data['email']=$request->email;
         $data['password']=Hash::make($request->password);
@@ -53,7 +53,9 @@ class AuthManager extends Controller
         if(!$user){
             return redirect(route('registration'))->with("error", "Registration failed, try again.");
         }
-        return redirect(route('login'))->with("success", "registration success, login to access the app");
+       return redirect(route('login'))->with("success", "registration success, login to access the app");
+
+        
     }
 
     function logout(Request $request){
