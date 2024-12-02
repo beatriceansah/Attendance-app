@@ -51,11 +51,11 @@ class AuthManager extends Controller
         $data['password']=Hash::make($request->password);
         $user = User::create($data);
         if(!$user){
-            return redirect(route('registration'))->with("error", "Registration failed, try again.");
+            return redirect(route('registration'));
         }
        return redirect(route('login'))->with("success", "registration success, login to access the app");
 
-        
+
     }
 
     function logout(Request $request){
