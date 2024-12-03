@@ -8,6 +8,8 @@ Route::get('/signinsignup', function () {
 Route::get('/userprofileandhistry', function () {
     return view(view: 'userprofileandhistry');
 });
+Route::view('/userprofile', view: 'userprofile')->name('userprofile');
+Route::view('/tracking', 'tracking')->name('tracking');
 Route::view('/home', 'home')->name('home');
 Route::view('/role', 'role')->name('role');
 Route::view('/Eventmanagement', 'Eventmanagement')->name('Eventmanagement');
