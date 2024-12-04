@@ -8,6 +8,7 @@ Route::get('/signinsignup', function () {
 Route::get('/userprofileandhistry', function () {
     return view(view: 'userprofileandhistry');
 });
+Route::view('/notificationalert', view: 'notificationalert')->name('notificationalert');
 Route::view('/userprofile', view: 'userprofile')->name('userprofile');
 Route::view('/tracking', 'tracking')->name('tracking');
 Route::view('/home', 'home')->name('home');

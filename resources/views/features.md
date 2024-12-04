@@ -28,7 +28,7 @@
 
 # Community and Engagement
 ## Community and Engagement
-1. Groups and Ministries: Allow users to join specific groups (e.g., choir, Bible study, volunteer groups) and receive updates specific to those.
+1. Groups and Ministries: Allow users to join specific groups (e.g., choir, Bible study, volunteer groups) an/d receive updates specific to those.
 2. Prayer Requests: A feature where users can submit prayer requests and view/pray for others' requests.
 3. Announcements: A section where campus church leaders can share news, devotionals, or other important messages.
 
