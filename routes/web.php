@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\http\controllers\AuthManager;
+use \App\http\controllers\AttendanceController;
 Route::get('/signinsignup', function () {
     return view(view: 'signinsignup');
 });
@@ -16,6 +17,7 @@ Route::view('/role', 'role')->name('role');
 Route::view('/Eventmanagement', 'Eventmanagement')->name('Eventmanagement');
 Route::post('/login', [AuthManager::class , 'loginPost'])->name('login.post');
 Route::post('/registration', [AuthManager::class , 'registrationPost'])->name('registration.post');
+Route::post('/tracking', [AttendanceController::class, 'trackingPost'])->name('tracking.post');
 Route::get('/logout', [AuthManager::class, 'logout'])->name('logout');
 Route::group(['middleware'=> 'auth'], function(){
 });

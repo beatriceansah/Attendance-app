@@ -23,8 +23,10 @@
   <main class="container mx-auto my-8 px-6">
 
     <section class="bg-white shadow-md rounded-lg p-6 mb-6">
-      <h2 class="text-xl font-bold mb-4">Manual Attendance</h2>
-      <form class="space-y-4">
+      <h2 class="text-xl font-bold mb-4">Manual Attendance
+        @csrf
+      </h2>
+      <form class="space-y-4" action="" method="POST" >
         <div>
           <label for="name" class="block text-gray-700 font-medium">Name</label>
           <input type="text" id="name" class="w-full border-gray-300 rounded-lg shadow-sm focus:ring focus:ring-green-300 focus:border-green-500" placeholder="Enter participant's name">
